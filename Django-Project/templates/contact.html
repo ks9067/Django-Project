@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Contact {% endblock title %}
+
+{% block body %}
+    <div class="container-fluid px-0 mb-3">
+        <img src="/static/2.jpg" class="d-block w-100" height="300">
+    </div>
+    <div class="container">
+        <h2 style="text-align: center;">Contact Us</h2>
+        <form method="POST" action="/contact">
+            {% csrf_token %}
+            <div class="form-group">
+              
+              <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter your Email" required>
+            </div>
+            <br>
+            <div class="form-group">
+                
+                <textarea class="form-control" id="desc" row="3" name="desc" placeholder="Enter your Text" required ></textarea>
+              </div>
+              <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>   
+    </div>
+{% endblock body %}

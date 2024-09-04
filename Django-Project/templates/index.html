@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+<body class="text-center">
+<b>Welcome {{request.user}} 🙏
+<b><p> YOU ARE SUCCESSFULLY LOGGED IN </p>
+
+<a href="/logout">
+    <button type="button" class="btn btn-warning">Logout</button>
+</a>
+<br><br>
+
+<div class="footer">
+<a href="/delete">
+    <button type="button" class="btn btn-danger">Delete Account</button>
+</a>
+</div>
+</body>
+{% endblock body %}
+
+{% block title %} Home {% endblock title %}
